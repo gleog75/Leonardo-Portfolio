@@ -18,9 +18,7 @@
     --terracotta: #B85C3A;
     --line: rgba(37,32,24,0.12);
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     background: var(--cream);
     color: var(--ink);
@@ -29,276 +27,55 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-
   .wrap { max-width: 900px; margin: 0 auto; padding: 0 28px; }
 
-  /* ── HEADER ── */
-  header {
-    padding: 56px 0 40px;
-    border-bottom: 1px solid var(--line);
-  }
+  header { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--aegean); font-weight: 500; margin-bottom: 16px; }
+  h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(38px, 6vw, 60px); line-height: 1.03; letter-spacing: -0.02em; }
+  h1 em { display: block; font-style: italic; font-weight: 300; font-size: 0.48em; color: var(--ink-soft); margin-top: 8px; letter-spacing: 0; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .pill { font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink-mid); }
+  .pill.accent { background: var(--aegean-bg); border-color: transparent; color: var(--aegean); }
 
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--aegean);
-    font-weight: 500;
-    margin-bottom: 16px;
-  }
-
-  h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: clamp(38px, 6vw, 60px);
-    line-height: 1.03;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-  }
-
-  h1 em {
-    display: block;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 0.48em;
-    color: var(--ink-soft);
-    margin-top: 8px;
-    letter-spacing: 0;
-  }
-
-  .pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
-  }
-
-  .pill {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 14px;
-    border-radius: 100px;
-    border: 1px solid var(--line);
-    color: var(--ink-mid);
-    background: transparent;
-  }
-
-  .pill.accent {
-    background: var(--aegean-bg);
-    border-color: transparent;
-    color: var(--aegean);
-  }
-
-  /* ── HERO SECTION ── */
-  .hero-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 52px;
-    padding: 52px 0 60px;
-    align-items: start;
-  }
-
-  .hero-img {
-    width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 3px;
-  }
-
-  .stats { display: flex; flex-direction: column; gap: 0; }
-
-  .stat-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border-bottom: 1px solid var(--line);
-    padding: 18px 0;
-  }
-
+  .hero-section { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; padding: 52px 0 60px; align-items: start; }
+  .hero-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; border-radius: 3px; }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); padding: 18px 0; }
   .stat-row.full { grid-template-columns: 1fr; }
+  .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--aegean); font-weight: 500; margin-bottom: 5px; }
+  .stat-value { font-size: 17px; font-weight: 500; }
+  .stat-note { font-size: 13px; color: var(--ink-soft); margin-top: 4px; line-height: 1.5; }
+  .lang-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+  .lang-tag { background: var(--aegean-bg); color: var(--aegean); font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 100px; }
 
-  .stat-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--aegean);
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
+  .gallery-section { padding-bottom: 64px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; border-top: 1px solid var(--line); padding-top: 36px; }
+  .section-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; letter-spacing: -0.01em; }
+  .section-note { font-size: 13px; color: var(--ink-soft); }
 
-  .stat-value {
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--ink);
-  }
-
-  .lang-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 6px;
-  }
-
-  .lang-tag {
-    background: var(--aegean-bg);
-    color: var(--aegean);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 12px;
-    border-radius: 100px;
-  }
-
-  .stat-note {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-top: 4px;
-    line-height: 1.5;
-  }
-
-  /* ── GALLERY ── */
-  .gallery-section {
-    padding-bottom: 64px;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 24px;
-    border-top: 1px solid var(--line);
-    padding-top: 36px;
-  }
-
-  .section-title {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: 26px;
-    letter-spacing: -0.01em;
-  }
-
-  .section-note {
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-
-  /* Masonry-style grid: 3 cols with varied heights */
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 220px;
-    gap: 10px;
-  }
-
-  .photo-grid .item {
-    overflow: hidden;
-    border-radius: 3px;
-    position: relative;
-  }
-
+  .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px; gap: 10px; }
+  .photo-grid .item { overflow: hidden; border-radius: 3px; }
   .photo-grid .item.tall { grid-row: span 2; }
-  .photo-grid .item.wide { grid-column: span 2; }
+  .photo-grid .item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform 0.4s ease; }
+  .photo-grid .item:hover img { transform: scale(1.03); }
 
-  .photo-grid .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  .photo-grid .item:hover img {
-    transform: scale(1.03);
-  }
-
-  /* ── CONTACT ── */
-  .contact-section {
-    border-top: 1px solid var(--line);
-    padding: 44px 0 64px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-
-  .contact-title {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: 26px;
-    letter-spacing: -0.01em;
-    margin-bottom: 6px;
-  }
-
-  .contact-sub {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 28px;
-  }
-
-  .contact-detail {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
+  .contact-section { border-top: 1px solid var(--line); padding: 44px 0 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .contact-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .contact-sub { font-size: 13px; color: var(--ink-soft); margin-bottom: 28px; }
+  .contact-detail { display: flex; flex-direction: column; gap: 16px; }
   .contact-row { display: flex; flex-direction: column; gap: 3px; }
-
-  .contact-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--aegean);
-    font-weight: 500;
-  }
-
-  .contact-value {
-    font-size: 15px;
-    color: var(--ink);
-    text-decoration: none;
-  }
-
+  .contact-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--aegean); font-weight: 500; }
+  .contact-value { font-size: 15px; color: var(--ink); text-decoration: none; }
   .contact-value:hover { color: var(--terracotta); }
+  .contact-note { background: var(--cream-dark); border-radius: 3px; padding: 20px 22px; font-size: 13px; color: var(--ink-soft); line-height: 1.7; }
+  .contact-note strong { color: var(--ink); font-weight: 500; display: block; margin-bottom: 6px; }
 
-  .contact-note {
-    background: var(--cream-dark);
-    border-radius: 3px;
-    padding: 20px 22px;
-    font-size: 13px;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ink-soft); }
+  footer .mark { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--terracotta); }
 
-  .contact-note strong {
-    color: var(--ink);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 24px 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    color: var(--ink-soft);
-  }
-
-  footer .mark {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 15px;
-    color: var(--terracotta);
-  }
-
-  /* ── RESPONSIVE ── */
   @media (max-width: 680px) {
-    header { padding: 36px 0 28px; }
     .hero-section { grid-template-columns: 1fr; gap: 32px; }
-    .photo-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
-    .photo-grid .item.wide { grid-column: span 1; }
+    .photo-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
+    .photo-grid .item.tall { grid-row: span 1; }
     .contact-section { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
   }
@@ -307,13 +84,9 @@
 <body>
 <div class="wrap">
 
-  <!-- HEADER -->
   <header>
     <p class="eyebrow">Child Talent Portfolio</p>
-    <h1>
-      Leonardo Garcia Tzoumaneka
-      <em>Athens, Greece &mdash; Age 3</em>
-    </h1>
+    <h1>Leonardo Garcia Tzoumaneka<em>Athens, Greece &mdash; Age 3</em></h1>
     <div class="pills">
       <span class="pill">Venezuelan</span>
       <span class="pill">Greek</span>
@@ -322,39 +95,20 @@
     </div>
   </header>
 
-  <!-- HERO + STATS -->
   <section class="hero-section">
-    <img class="hero-img" src="images/hero-donut.jpg" alt="Leonardo Garcia Tzoumaneka — close-up portrait">
+    <img class="hero-img" src="images/ferriswheel.jpg" alt="Leonardo — close-up portrait">
     <div class="stats">
       <div class="stat-row">
-        <div>
-          <div class="stat-label">Date of birth</div>
-          <div class="stat-value">September 11, 2022</div>
-        </div>
-        <div>
-          <div class="stat-label">Age</div>
-          <div class="stat-value">3 years old</div>
-        </div>
+        <div><div class="stat-label">Date of birth</div><div class="stat-value">September 11, 2022</div></div>
+        <div><div class="stat-label">Age</div><div class="stat-value">3 years old</div></div>
       </div>
       <div class="stat-row">
-        <div>
-          <div class="stat-label">Height</div>
-          <div class="stat-value">105 cm</div>
-        </div>
-        <div>
-          <div class="stat-label">Based in</div>
-          <div class="stat-value">Athens, Greece</div>
-        </div>
+        <div><div class="stat-label">Height</div><div class="stat-value">105 cm</div></div>
+        <div><div class="stat-label">Based in</div><div class="stat-value">Athens, Greece</div></div>
       </div>
       <div class="stat-row">
-        <div>
-          <div class="stat-label">Eyes</div>
-          <div class="stat-value">Green-hazel</div>
-        </div>
-        <div>
-          <div class="stat-label">Hair</div>
-          <div class="stat-value">Curly, light brown</div>
-        </div>
+        <div><div class="stat-label">Eyes</div><div class="stat-value">Green-hazel</div></div>
+        <div><div class="stat-label">Hair</div><div class="stat-value">Curly, light brown</div></div>
       </div>
       <div class="stat-row full">
         <div class="stat-label">Languages spoken at home</div>
@@ -372,47 +126,25 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section class="gallery-section">
     <div class="section-header">
       <h2 class="section-title">Gallery</h2>
       <span class="section-note">Natural, unproduced photography</span>
     </div>
     <div class="photo-grid">
-      <!-- Row 1 -->
-      <div class="item tall">
-        <img src="images/overalls.jpg" alt="Leonardo in denim overalls, full body">
-      </div>
-      <div class="item">
-        <img src="images/xylophone.jpg" alt="Leonardo in xylophone costume, smiling">
-      </div>
-      <div class="item">
-        <img src="images/beach.jpg" alt="Leonardo at the beach on inflatable">
-      </div>
-      <!-- Row 2 -->
-      <div class="item tall">
-        <img src="images/fireplace.jpg" alt="Leonardo in bow tie, formal">
-      </div>
-      <div class="item">
-        <img src="images/tree.jpg" alt="Leonardo climbing a tree with thumbs up">
-      </div>
-      <!-- Row 3 -->
-      <div class="item">
-        <img src="images/carousel.jpg" alt="Leonardo on carousel horse">
-      </div>
-      <div class="item">
-        <img src="images/sweater.jpg" alt="Leonardo in blue sweater, full body">
-      </div>
-      <div class="item tall">
-        <img src="images/bike.jpg" alt="Leonardo riding a balance bike">
-      </div>
-      <div class="item">
-        <img src="images/curious.jpg" alt="Leonardo looking up curiously">
-      </div>
+      <div class="item tall"><img src="images/hero-donut.jpg" alt="Leonardo close-up with donut"></div>
+      <div class="item"><img src="images/xylophone.jpg" alt="Leonardo in xylophone costume"></div>
+      <div class="item"><img src="images/beach.jpg" alt="Leonardo at the beach"></div>
+      <div class="item tall"><img src="images/tree.jpg" alt="Leonardo climbing a tree with thumbs up"></div>
+      <div class="item"><img src="images/overalls.jpg" alt="Leonardo in denim overalls"></div>
+      <div class="item"><img src="images/dino-jacket.jpg" alt="Leonardo in dinosaur jacket outdoors"></div>
+      <div class="item tall"><img src="images/trampoline.jpg" alt="Leonardo on trampoline"></div>
+      <div class="item"><img src="images/park-walk.jpg" alt="Leonardo walking in the park"></div>
+      <div class="item"><img src="images/bowtie.jpg" alt="Leonardo in bow tie formal wear"></div>
+      <div class="item"><img src="images/bike.jpg" alt="Leonardo riding balance bike"></div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="contact-section">
     <div>
       <h2 class="contact-title">Get in touch</h2>
@@ -438,7 +170,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <span>&copy; 2025 Leonardo Garcia Tzoumaneka</span>
     <span class="mark">Leonardo</span>
